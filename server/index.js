@@ -9,14 +9,9 @@ app.use( bodyParser.json() );
 app.use(express.static(__dirname + '/../react-client/dist'));
 
 app.get('/api/users', function (req, res) {
-  console.log(
-    'req====>', req,
-    'res====>', res
-  )
-    return Users.findAll().then(users => {
-      console.log('did we find all the users?', users);
-      return users;
-    })
+  return Users.findAll().then(users => {
+    res.send(users);
+  });
 });
 
 app.listen(1337, function() {

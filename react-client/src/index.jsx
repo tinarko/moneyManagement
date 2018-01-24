@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import data from './dummy_data.js';
 import Balance from './components/Balance.jsx';
 
 
@@ -14,13 +13,14 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    var context = this;
     $.ajax({
       url: 'api/users',
       method: 'GET',
       contentType: 'application/json',
       success: function(allUsers) {
-        this.setState({allUsers: allUsers});
-        console.log('HI????');
+        console.log(allUsers);
+        context.setState({allUsers: allUsers});
       },
       fail: function(err) {
         throw new Error('unable to find all users');
@@ -31,7 +31,7 @@ class App extends React.Component {
   render () {
     return (
       <div>
-        <Balance data={data}/>
+        <Balance allUsers={allUsers}/>
       </div>
     );
   }
