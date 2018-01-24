@@ -3,3 +3,7 @@
 node_modules/
 
 package-lock.json
+
+react-client/dist
+
+.DS_Store

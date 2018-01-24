@@ -27,7 +27,7 @@ class Balance extends React.Component {
     this.setState({foundUser: true});
     let name = this.state.name;
     let friends = this.state.friends;
-    this.props.data.forEach(user => {
+    this.props.allUsers.forEach(user => {
       if (user.name.toLowerCase() === name.toLowerCase()) {
         this.setState({balance: user.balance});
       } else {

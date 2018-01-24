@@ -19,7 +19,6 @@ class App extends React.Component {
       method: 'GET',
       contentType: 'application/json',
       success: function(allUsers) {
-        console.log(allUsers);
         context.setState({allUsers: allUsers});
       },
       fail: function(err) {
@@ -31,7 +30,7 @@ class App extends React.Component {
   render () {
     return (
       <div>
-        <Balance allUsers={allUsers}/>
+        <Balance allUsers={this.state.allUsers}/>
       </div>
     );
   }
