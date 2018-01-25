@@ -14,7 +14,7 @@ app.get('/api/users', function (req, res) {
   });
 });
 
-app.listen(1337, function() {
-  console.log('listening on port 1337!');
+app.listen(1338, function() {
+  console.log('listening on port 1338!');
 });
 

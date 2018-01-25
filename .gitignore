@@ -4,6 +4,7 @@ node_modules/
 
 package-lock.json
 
-react-client/dist
-
 .DS_Store
+
+react-client/.DS_Store
+react-client/dist/bundle.js
